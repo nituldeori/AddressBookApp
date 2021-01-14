@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "../css/addressBookForm.css">
+        <script src="../js/form.js"></script>
         <title>Address Book Entry Form</title>
     </head>
     <body>
@@ -16,5 +19,71 @@
                 </div>
             </div>
         </header>
+        <div class="form-content">
+            <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
+                <div class="form-head">PERSON ADDRESS FORM
+                    <a href="../pages/addressBookForm.html"><img src="../assets/CancelButton.jpeg" style="float: right; padding-right: 10px;"></a>
+                </div>
+                <div class="row-content">
+                    <label class="label text" for="name">Full Name</label>
+                    <input class="input" type="text" id="name" name="name" placeholder="Person name.." required>
+                    <error-output class="text-error" for="text"></error-output>
+
+                </div>
+
+                <div class="row-content">
+                    <label for="phone" class="label text">Phone Number</label>
+                    <input type="number" class="input" id="phone" name="phone" placeholder="Enter Your No..." required>
+                    <error-output class="phone-error" for="phone"></error-output>
+                </div>
+
+                <div class="row-content">
+                    <label for="address" class="label text">Address</label>
+                    <textarea name="address" id="address" class="input" placeholder="Full Address..." style="height: 100px;"></textarea>
+                </div>
+                <div class="row-content">
+                    <div class="row3">
+                        <label class="label text" for="city">City</label>
+                        <select id="city" name="city" style="width: 80%">
+                            <option value="Select City">Select City</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Guwahati">Guwahati</option>
+                        </select>
+                    </div>
+                    <div class="row3">
+                        <label class="label text" for="state">State</label>
+                        <select id="state" name="state" style="width: 80%;">
+                            <option value="Select State">Select State</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Assam">Assam</option>
+                        </select>
+                    </div>
+
+                    <div class="row3">
+                        <label class="label text" for="zip">Zip Code</label>
+                        <input class="input" type="text" id="zip" name="zipCode" required>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <div class="buttonParent">
+                        <div class="submit-reset">
+                            <button type="submit" class="button submitButton" id="submitButton">Add</button>
+                            <button type="reset"  class="resetButton button">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <script src="../js/AddressBookContact.js"></script>
+        
+            
     </body>
 </html>
